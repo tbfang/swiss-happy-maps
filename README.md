@@ -21,6 +21,7 @@ We describe the risks we face in doing this analysis as well as what we can do t
 ## Deliverables
 ### Machine Learning
 * A result of the sentiment analysis of twitter and instagram posts along with a measure of how good our model is in doing sentiment analysis.
+
 ### Visualization
 * Using the results of the sentiment analysis to make a map of Switzerland which shows how happy each part is. The map should eveolve over time.
 * If we can also get the reason for change in the sentiment by doing the frequency analysis, we can use http://cesiumjs.org/ to have objects appear at places where we know the reason for the sentiment. For example along with showing that there is a positive sentiment in verbier in the winter, we show a picture of a ski there.
