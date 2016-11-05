@@ -1,7 +1,7 @@
 # Evolution of happiness over time for different places in Switzerland
 
 ## Abstract
-We are
+Switzerland is always near the top when we see the list of happiest countries in the world. So what is it that makes Switzerland so happy? Is it the mountains? The lakes? The money? We try to do an analysis of how happy each part of Switzerland is during different times of the year and what is it that makes it happy by doing a sentiment analysis of geotagged social media posts. We describe our approach below.
 
 ## Data description and methodology
 * **Twitter** - We will use the twitter dataset from 2012 provided by Prof. Catasta. We will use machine learning techniques on the text of the tweets as well as use hashtags and emoticons to do a sentiment analysis on the tweets. We will also look for a corpus on which we can train our model. [1] suggests several possible datasets we can use to train our model.
@@ -23,3 +23,13 @@ We describe the risks we face in doing this analysis as well as what we can do t
 * A result of the sentiment analysis of twitter and instagram posts along with a measure of how good our model is in doing sentiment analysis.
 ### Visualization
 * Using the results of the sentiment analysis to make a map of Switzerland which shows how happy each part is. The map should eveolve over time.
+* If we can also get the reason for change in the sentiment by doing the frequency analysis, we can use http://cesiumjs.org/ to have objects appear at places where we know the reason for the sentiment. For example along with showing that there is a positive sentiment in verbier in the winter, we show a picture of a ski there.
+
+## Timeplan
+
+|                       | 7-13 Nov  | 14-20 Nov | 21-27 Nov | 28 Nov-4 Dec | 5-11 Dec | 12-18 Dec | 19-25 Dec | 26 Dec-1 Jan | 2-8 Jan | 9-15 Jan | 15-22 Jan
+|---------------------------|----------------|------------|-------------|-------------|----------------|------------|-------------|-------------|--------------Happiness Map of Lausanne¶--|-----------|------------|
+| Preparing and cleaning the data |        *        |     *       |              |             |                |            |             |             |                |           |            |
+| Sentiment Analysis           |                |            |      *       |      *       |       *         |   *        |    *      |      *       |            |       |            |
+| Result Visualization      |                |            |             |             |                |            |       *      |       *      |       *         |     *      |      *     |
+
