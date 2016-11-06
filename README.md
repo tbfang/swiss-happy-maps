@@ -34,3 +34,7 @@ We describe the risks we face in doing this analysis as well as what we can do t
 | Sentiment Analysis           |                |            |      *       |      *       |       *         |   *        |    *      |      *       |            |       |            |
 | Result Visualization      |                |            |             |             |                |            |       *      |       *      |       *         |     *      |      *     |
 
+## Bibliography
+1. http://stackoverflow.com/questions/7551262/training-data-for-sentiment-analysis
+2. http://stackoverflow.com/questions/3920759/unsupervised-sentiment-analysis
+3. http://goodcitylife.org/
