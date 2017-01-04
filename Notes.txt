@@ -1,5 +1,7 @@
 1. Do we want all kinds of posts? For example, do we want want posts like this: https://www.instagram.com/p/BE0J2iBg7wb/ which is basically a post of some lady having prepared food in her house. If we also include such posts, what happiness does our happiness map show?
-2. It seems that we already have a sentiment given for all the data in the JSON.
-3. Ideas for what to do no:
+2. It seems that we already have a sentiment for a part of the Instagram data. So we plan to use the tagged images as a label to tag the other images with a sentiment.
+3. Ideas for what to do next:
     Maybe do some analysis of the users and the sentiment. Like what kind of users have a better sentiment of Switzerland. Is there some correlation with where the users are from or the gender of the user?
+
+NOTE: You need to run spark-submit after logging in to the cluster and copying the .py file to the home directory of the cluster.
     
