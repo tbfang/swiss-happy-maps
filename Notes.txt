@@ -9,3 +9,7 @@ NOTE: You need to run spark-submit after logging in to the cluster and copying t
 Result for Instagram:
 Posts w/o sentiment: 6845983
 Posts with sentiment: 1504278
+
+Result for Twitter:
+Posts w/o sentiment: 808445
+Posts with sentiment: 10019625
