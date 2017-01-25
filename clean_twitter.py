@@ -59,5 +59,4 @@ for f in file_list[:15]:
     s_temp = getCols(df_temp)
     cleaned_df = cleaned_df.unionAll(s_temp)
 
-cleaned_df.write.parquet('file:///home/padh/twitter_cleaned_oct2.parquet')
-
+cleaned_df.write.parquet('file:///home/fang/twitter_gender.parquet')
