@@ -1,0 +1,177 @@
+---
+title: "RMaps Choropleth"
+output: html_notebook
+purpose: running the sample choropleth from the site one by one...
+---
+
+```{r}
+library(rMaps)
+install.packages("Quandl")
+install.packages("knitr")
+ichoropleth(Crime ~ State, data = subset(violent_crime, Year == 1980))
+```
+
+```{r}
+library(knitr)
+```
+
+```{r}
+datm
+```
+
+
+```{r}
+# getting the data
+datm = read.csv('gender_viz.csv')
+datm = subset(datm, select=-c(canton))
+datm
+```
+
+```{r}
+# discretizing sentiment and creating fills
+datm2 <- transform(datm,
+  fillKey = cut(sentiment, quantile(sentiment, seq(-0, 1, 1/5)), labels = LETTERS[1:5]))
+```
+
+```{r}
+datm2[is.na(datm2)] = "A"
+datm2
+```
+
+```{r}
+typeof(LETTERS[1:5][1])
+typeof("A")
+datm2['fillKey'][0,1]
+```
+
+
+
+```{r}
+# associate fillColors 
+
+fills = setNames(
+  c(RColorBrewer::brewer.pal(5, 'YlOrRd'), 'white'),
+  c(LETTERS[1:5], 'defaultFill')
+)
+
+```
+
+```{r}
+# to JSONArray2
+toJSONArray2 <- function(obj, json = TRUE, names = TRUE, ...){
+  value = lapply(1:nrow(obj), function(i) {
+    res <- as.list(obj[i, ])
+    if (!names) names(res) <- NULL  # remove names (e.g. {x = 1, y = 2} => {1, 2})
+    return(res)
+  })
+  if (json){
+    return(toJSON(value, .withNames = F, ...))
+  } else {
+    names(value) <- NULL;
+    return(value)
+  }
+}
+```
+
+
+```{r}
+# create Payload for DataMaps
+library(plyr); library(rMaps)
+dat2 <- dlply(na.omit(datm2), "gender", function(x){
+  y = toJSONArray2(x, json = F)
+  names(y) = lapply(y, '[[', 'canton_code')
+  return(y)
+})
+```
+
+```{r}
+dat2[[1]]
+```
+
+
+```{r}
+# Create Simple Choropleth
+library(rMaps); library(rCharts)
+options(rcharts.cdn = TRUE)
+map = Datamaps$new()
+map$set(
+  scope = 'cantons',
+  geographyConfig = list(
+    dataUrl="ch-cantons.topojson.json"),
+  setProjection = "#! function( element, options ) {
+      var projection, path;
+      projection = NULL;
+      path = d3.geo.path().projection(projection);
+      return {path: path, projection: projection};
+  } !#",
+  
+  fills = fills,
+  data = dat2[[1]],
+  legend = TRUE,
+  labels = TRUE
+)
+map
+```
+
+```{r}
+library(rMaps); library(rCharts)
+options(rcharts.cdn = TRUE)
+map <- Datamaps$new()
+```
+
+```{r}
+# Checking things should work
+NULL
+d1 <- ichoropleth(, data=dat2, ncut=8, map='cantons')
+dat2[[1]]
+```
+
+
+
+```{r}
+# swiss map that should work!!
+map$set(
+  scope = 'usa',
+#  geographyConfig = list(
+#    dataUrl="Documents/EPFL/ADA/ADA-Project/Visualization/ch-cantons.topojson.json"),
+  setProjection = '#! function( element, options ) {
+      var projection, path;
+      projection = NULL;
+      path = d3.geo.path().projection(projection);
+      return {path: path, projection: projection};
+  } !#'
+)
+map
+
+#  fills = fills,
+#  data = dat2[[1]],
+#  legend = TRUE,
+#  labels = TRUE
+
+```
+
+
+```{r}
+# map that does display
+options(rcharts.cdn = TRUE)
+map <- Datamaps$new()
+map$set(
+#  dom = 'chart_1',
+#  scope = 'world',
+#  fills = fills,
+#  data = dat2[[1]],
+#  legend = TRUE,
+  labels = TRUE
+)
+map
+```
+
+
+
+
+
+
+
+
+
+
