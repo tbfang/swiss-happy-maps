@@ -1,30 +1,19 @@
 ---
 title: "RMaps Choropleth"
 output: html_notebook
-purpose: running the sample choropleth from the site one by one...
+purpose: running the sample choropleth from the site one by one based on http://rmaps.github.io/blog/posts/animated-choropleths/index.html
 ---
 
 ```{r}
 library(rMaps)
-install.packages("Quandl")
-install.packages("knitr")
-ichoropleth(Crime ~ State, data = subset(violent_crime, Year == 1980))
-```
-
-```{r}
 library(knitr)
 ```
-
-```{r}
-datm
-```
-
 
 ```{r}
 # getting the data
 datm = read.csv('gender_viz.csv')
 datm = subset(datm, select=-c(canton))
-datm
+datm = subset(datm, select=-c(X))
 ```
 
 ```{r}
@@ -34,17 +23,17 @@ datm2 <- transform(datm,
 ```
 
 ```{r}
+# filling out the NA in fillKey
 datm2[is.na(datm2)] = "A"
 datm2
 ```
 
 ```{r}
+# testing out that things are working...
 typeof(LETTERS[1:5][1])
 typeof("A")
 datm2['fillKey'][0,1]
 ```
-
-
 
 ```{r}
 # associate fillColors 
@@ -90,7 +79,26 @@ dat2[[1]]
 
 
 ```{r}
-# Create Simple Choropleth
+# exact same map as online tutorial
+
+library(rMaps); library(rCharts)
+options(rcharts.cdn = TRUE)
+map <- Datamaps$new()
+options(rcharts.cdn = TRUE)
+map$set(
+  dom = 'chart_1',
+  scope = 'usa',
+  fills = fills,
+  data = dat2[[1]],
+  legend = TRUE,
+  labels = TRUE
+)
+map
+```
+
+```{r}
+# Swiss Choropleth, should be same as suggestion here
+# https://github.com/ramnathv/rMaps/issues/21
 library(rMaps); library(rCharts)
 options(rcharts.cdn = TRUE)
 map = Datamaps$new()
@@ -113,11 +121,7 @@ map$set(
 map
 ```
 
-```{r}
-library(rMaps); library(rCharts)
-options(rcharts.cdn = TRUE)
-map <- Datamaps$new()
-```
+
 
 ```{r}
 # Checking things should work
@@ -151,20 +155,7 @@ map
 ```
 
 
-```{r}
-# map that does display
-options(rcharts.cdn = TRUE)
-map <- Datamaps$new()
-map$set(
-#  dom = 'chart_1',
-#  scope = 'world',
-#  fills = fills,
-#  data = dat2[[1]],
-#  legend = TRUE,
-  labels = TRUE
-)
-map
-```
+
 
 
 
