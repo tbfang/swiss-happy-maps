@@ -18,6 +18,7 @@ insta_files = '*/harvest3r_instagram_data*.json'
 news_files = '*/harvest3r_news_data*.json'
 twitter_files = '/harvest3r_twitter_data*.json'
 
+
 # Check if 'column' exists in df
 def hasColumn(df, column):
     try:
@@ -91,7 +92,7 @@ for m in months:
         s_temp = getCols(df_temp)
         cleaned_df = cleaned_df.unionAll(s_temp)
 
-    cleaned_df.write.parquet('file:///home/fang/twitter_gender' + '_' + m[:3]+'.parquet')
+    cleaned_df.write.parquet('file:///home/padh/twitter_gender' + '_' + m[:3]+'.parquet')
 
 
                     
