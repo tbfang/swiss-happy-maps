@@ -4,7 +4,7 @@ library(leaflet)
 library(shiny)
 
 shinyUI(fluidPage(
-  titlePanel(strong("Happiness of Switzerland")),
+  titlePanel("Happiness of Switzerland"),
   
   sidebarLayout(
     sidebarPanel(
@@ -44,6 +44,6 @@ shinyUI(fluidPage(
       
     ),
   
-    mainPanel(leafletOutput("map"))
+    mainPanel(leafletOutput("map", height="557px"))
   )
 ))

@@ -23,7 +23,7 @@ palette <- colorBin(c('#a50026',
   # popup1 <- paste0("<span style='color: #7f0000'><strong>Canton: </strong></span>", df$canton_code,
   #                  "<br><span style='color: salmon;'><strong>Happiness: </strong></span>", 
   #                  df$sentiment)
-  mymap <- leaflet() %>%
+  mymap <- leaflet(height = "800px") %>%
     addProviderTiles("Esri.WorldGrayCanvas",options = tileOptions(minZoom=0, maxZoom=16)) %>%
     addPolygons(data = swiss_cantons, 
                 fillColor = ~palette(df$sentiment), 
