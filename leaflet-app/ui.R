@@ -4,11 +4,11 @@ library(leaflet)
 library(shiny)
 
 shinyUI(fluidPage(
-  titlePanel("Happiness of Switzerland"),
+  titlePanel(strong("Happiness of Switzerland")),
   
   sidebarLayout(
     sidebarPanel(
-      helpText("Explore sentiment patterns in Switzerland, according to demographics"),
+      helpText("Explore sentiment patterns in Switzerland across dimensions."),
     
       selectInput("gender", # gender
         label = "Gender",
@@ -30,9 +30,17 @@ shinyUI(fluidPage(
         min = 1, max = 10, value = c(1,10)),
 
       br(),
+
+      "Built at",
+      img(src = "Logo_EPFL.png", height = 30, width = 60), "with",
       br(),
-      "Data source: Twitter", 
-      img(src = "twitter.png", height = 48, width = 80)
+      br(),
+      img(src = "leaflet.png", height = 30, width = 100), "        ",
+      img(src = "shiny.png", height = 25, width = 50), "           ",
+      img(src = "spark.png", height = 25, width = 50),
+      br(),
+      br(),
+      "by Luis Medina, Kirtan Padh, Tina Fang"
       
     ),
   
