@@ -1,0 +1,200 @@
+# The main object in R is called a data frame.
+# Build a Data Frame
+# ------------------
+x = c(1,2,-1) # This is a vector of 1, 2, and -1
+x
+y = c(1,2,3)
+# Parsing a Data Frame
+# --------------------
+x[3] # gives us the 3rd element of x
+x[1:2]  # gives us the 1st to the 2nd element of x
+x[-2]  # remove element 2 from x
+# also, we could ask for all elements of x that are greater than zero...
+# or some other number
+x[x>0]
+# Concatenating
+# data frames
+# ------------
+c(x,3)
+c(x,y)
+# remove elements 1 and 3
+x
+x[c(-1,-3)]
+# the [1] refers to the FIRST ELEMENT. If you have more data
+# that travels to another line then the element number will
+# be in the brackets
+c(1:100)
+# The help functions
+# ------------------
+# There are two help functions each with 2 flavours
+# 1. help or ?
+# 2. help.search or ??
+help(seq)
+?seq
+# If you don't know the function name you'd use help.search
+# help.search looks in every help file and looks for your text
+help.search("mean")
+??mean
+# Note if you want to stop R from running on something hit the stop sign.
+# Operators
+# ------------------
+# Addition/Subtraction
+# ------------------
+# add a constant to x
+2+x
+# adds two to every element
+x
+x-y  # subtract or add data frames
+# Multiplication/Division
+# ------------------
+# Multiply by a constant
+2*x
+# multiplies each element by 2
+# Multiply by two data frames
+x*y
+# Each element of x multiplies by each element of y
+# x^2
+x^2
+# If x and y are of different sizes it crashes!
+x = c(1,2,-1)
+y = c(1:4)
+x*y
+rnorm(1,75,5)
+rnorm(2,74,5)
+# To ensure that your responses do not change each time
+# you run rnorm, you need to set a seed.
+set.seed(1)
+rnorm(2,75,5)
+set.seed(1)
+rnorm(2,75,5)
+rbinom(1,2,0.5)
+# Means we flipped a coin 2 times and obtained 0 heads
+rbinom(2,2,0.5)
+# means we flipped the coin twice and obtained 2 heads and then
+# we flipped the coin another two times and obtained 2 heads
+contributors()
+dbinom(1,2,0.5)
+dnorm(75,75,5)
+pbinom(1,2,0.5)
+pnorm(75,75,5)
+hist(rnorm(100,75,5))
+x = c(1:100)
+rnorm(100,75,5)  # 100 normal data points with a mean
+# of 75 and standard deviation of 5
+partial_sum = cumsum(data)
+data = rnorm(100,75,5)
+partial_sum = cumsum(data)
+# the second element of "partial_sums" is the sum of the first
+# and second element of "data"
+# the ith element of partial_sums is the sum of the first i
+# elements of data.
+partial_averages = partial_sums/c(1:100)
+partial_sums = partial_sum
+partial_averages = partial_sums/c(1:100)
+plot(x,partial_averages, "1")  #plot a line = l
+plot(x,partial_averages, "l")  #plot a line = l
+# Notice that as n -> infinity the sample average converges to
+# mu=75
+x = c(1:100)
+y = x + rnorm(100,0,5)  # adds a norm(0,25) data value
+plot(x,y)
+cov(x,y)
+# that number is useless! The sign, positive, is all we care about
+y = -x + rnorm(100,0,5)
+plot(x,y)
+par(mfrow=c(2,2))
+# changes the parameters of R. This allows you to display
+# plots in a 2x2 matrix
+covcor = function(x,pos_neg)
+{#Start of a function, with input parameters x, the data set}
+# and pos_neg which is either +1 or -1. Please note! We
+# do NOT do any checks that this is true!
+corr = NULL
+# This creates an empty list or array. We will build this list
+# element by element.
+for (i in 1:4)
+{#Start of a for loop...}
+y = pos_neg*x + rnorm(100,i^3)
+# recall last class! We made y = x + FUZZ.
+plot(x,y)   # produces a scatter plot.
+corr = c(corr,cor(x,y))
+for (i in 1:4)#
++ {#Start of a for loop...#
++ y = pos_neg*x + rnorm(100,i^3)#
++ #
++ # recall last class! We made y = x + FUZZ.#
++ plot(x,y)   # produces a scatter plot.#
++ corr = c(corr,cor(x,y))}  # end of for loop
+}
+covcor = function(x,pos_neg)#
+{#
+	corr = NULL#
+	for (i in 1:4)#
+	{#
+		y = pos_neg*x + rnorm(100, i^3)#
+		plot(x,y)#
+		corr = c(corr, cor(x,y))#
+	}#
+}
+covcor(c(1:100), -1)
+covcor = function(x,pos_neg)#
+{#
+	corr = NULL#
+	for (i in 1:4)#
+	{#
+		y = pos_neg*x + rnorm(100, i^3)#
+		plot(x,y)#
+		corr = c(corr, cor(x,y))#
+	}#
+	return corr#
+}#
+#
+covcor(c(1:100),-1)
+# should have 4 plots
+CrownAnchor(6)
+CrownAnchor<-function(n) {
+expectation = rbinom(1,3,1/6) + 2 * rbinom(2,3,1/6) + 3 * rbinom(3,3,1/6)
+fdas
+3
+4
+6
+CrownAnchor(4)
+expectation = rbinom(1,3,1/6) + 2 * rbinom(2,3,1/6) + 3 * rbinom(3,3,1/6)
+covcor(c(1:100),-1)
+covcor<-function(x,pos_neg)
+return 3
+CrownAnchor(6)
+}
+mysummary <- function(x,npar=TRUE,print=TRUE) {
+foasd\
+sum(3,4)
+CrownAnchor(6)
+CrownAnchor<-function(n) {
+expectation =3
+return expectation}
+<-function(n) {
+CrownAnchor<-function(n) {
+expectation = 3
+return expectation
+var(1,2,3,4,5)
+var(1,2,2,34)
+install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
+devtools::install_github('IRkernel/IRkernel')
+IRernel::installspec()
+IRkernel::installspec()
+jupyter notebook
+jupyter --help
+IRkernel::installspec()
+install.packages('rzmq',#
+                 repos = c('http://irkernel.github.io/', getOption('repos')),#
+                 type = 'source')
+install.packages(c('repr','IRkernel','IRdisplay'), repos = c('https://irkernel.github.io/', getOption('repos')))
+IRkernel::installspec()
+load("/Users/tbfang/Documents/EPFL/ADA/ADA-Project/Visualization/violent_crime.rda")
+r -f choropleth_function.r
+library(maps)#
+library(mapproj)#
+source("census-app/helpers.R")#
+counties <- readRDS("census-app/data/counties.rds")#
+percent_map(counties$white, "darkgreen", "% White")
+source("/Users/tbfang/Documents/EPFL/ADA/ADA-Project/Learn Shiny/leaflet-app/choropleth_map.R")
