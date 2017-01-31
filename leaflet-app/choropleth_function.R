@@ -55,6 +55,11 @@ palette <- colorBin(c('#a50026',
       }
     }") %>%
     
+addLegend(position = 'topright',
+              colors = NULL,
+              labels = NULL,
+              title = "<h8>Twitter Sentiment Analysis</h8><h6>Hover over a Canton</h6>")%>%
+
     addLegend(position = 'bottomright',
               colors = c('#a50026', 
                       '#d73027',
