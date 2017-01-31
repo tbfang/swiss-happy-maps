@@ -44,6 +44,6 @@ shinyUI(fluidPage(
       
     ),
   
-    mainPanel(leafletOutput("map"))
+    mainPanel(leafletOutput("map", height="557px"))
   )
 ))
