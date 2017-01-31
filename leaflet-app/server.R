@@ -13,6 +13,7 @@ library(plyr)
 cantons_kml <- read.csv("data/cantons_kml.csv", encoding="latin1", sep=",", dec=".")
 cantons_kml$X <- NULL
 twitter_full <- read.csv("data/twitter.csv", encoding="latin1", sep=",", dec=".")
+canton_mapping <- read.csv("data/canton_code.csv", encoding="latin1", sep=",", dec=".")
 
 # FILTERING FUNCTIONS
 filter_df <- function(df, gender, min_month, max_month, language, time_period){
@@ -28,6 +29,7 @@ filter_df <- function(df, gender, min_month, max_month, language, time_period){
 group_df <- function(df) {
   df <- ddply(df,.(canton_code),summarise,
       sentiment = weighted.mean(sentiment, count, ,na.rm=TRUE))
+  df <- merge(x = canton_mapping, y = df, by = "canton_code", all.x = TRUE) # adding canton_original
   # aggregate(sentiment ~ canton_code, df, mean)
   df <- join(cantons_kml, df, type = "left")
   # merge(x = cantons_kml, y = df, by = "canton_code", all.x = TRUE)

@@ -55,7 +55,7 @@ palette <- colorBin(c('#a50026',
       }
     }") %>%
     
-    addLegend(position = 'topleft',
+    addLegend(position = 'bottomright',
               colors = c('#a50026', 
                       '#d73027',
                       '#f46d43',
@@ -69,7 +69,7 @@ palette <- colorBin(c('#a50026',
                       '#006837'), 
               labels = c(-1, -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4,0.6,0.8,1), 
               opacity = 1, 
-              title = "<black>Sentiment:</black>")
+              title = "<black>Sentiment</black>")
   
   # print(mymap)  
 }
