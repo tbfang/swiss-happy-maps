@@ -14,7 +14,7 @@ We found that the json files (hosted in the cluster, hdfs://iccluster046.icclust
 * Instagram posts w/o sentiment: 6,845,983 (81.2%)
 * Instagram posts with sentiment: 1,504,278 (18.8%)
 
-**Note: **in order to get the total number of both tweets and instagram posts in the json files in the cluster, one can "run_count_sent.py" (in the scripts folder in this repository)
+**Note:** in order to get the total number of both tweets and instagram posts in the json files in the cluster, one can "run_count_sent.py" (in the scripts folder in this repository)
 
 We decided not to train an image classificator since the pictures we have don't make sense with their respective sentiment, examples of these are:
 
