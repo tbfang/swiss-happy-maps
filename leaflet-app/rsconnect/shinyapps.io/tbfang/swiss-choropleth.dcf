@@ -1,0 +1,10 @@
+name: swiss-choropleth
+title: swiss-choropleth
+account: tbfang
+server: shinyapps.io
+appId: 154001
+bundleId: 700839
+url: https://tbfang.shinyapps.io/swiss-choropleth/
+when: 1486243594.2057
+asMultiple: FALSE
+asStatic: FALSE

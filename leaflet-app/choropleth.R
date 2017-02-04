@@ -18,16 +18,10 @@ palette <- colorBin(c('#a50026',
                       '#1a9850',
                       '#006837'), 
                      bins = c(-1, -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4,0.6,0.8,1))
-<<<<<<< HEAD
-  
-  # popup1 <- paste0("<span style='color: #7f0000'><strong>Canton: </strong></span>", df$canton_code,
-  #                  "<br><span style='color: salmon;'><strong>Happiness: </strong></span>", 
-  #                  df$sentiment)
-  mymap <- leaflet(height = "800px") %>%
-=======
+
   #Defining the map with leaflet
   mymap <- leaflet() %>%
->>>>>>> 308f935b54a7114a1570e29dbcd8ecf76687d249
+    setView(8.2275, 46.8182, zoom = 8) %>%
     addProviderTiles("Esri.WorldGrayCanvas",options = tileOptions(minZoom=0, maxZoom=16)) %>%
     #Defining the polygon, which is going to be the layer for the sentiments of the tweets, this polygon will have the option of highlight
     #which will help us to display the label (Name of the canton along with its sentiment) whenever you past the mouse courser over a certain canton

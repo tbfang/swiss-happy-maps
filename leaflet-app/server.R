@@ -3,7 +3,7 @@
 # overall, never changes
 # load libraries, read data sets
 
-source("choropleth_function.R")
+source("choropleth.R")
 library(sp)
 library(rgdal)
 library(leaflet)
