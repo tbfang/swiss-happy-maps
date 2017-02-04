@@ -12,3 +12,5 @@ the tokenized and stop-words removed tweet as a list. This is for ease of doing 
 
 4. `location.p`: Is a dictionary which maps location o canton from using all the tweets which have both columns. This is 
 appropriately filtered to make the `small_dict`.
+
+5. `twitter.csv`: Final CSV file used to make the visualisation in RStudio.
