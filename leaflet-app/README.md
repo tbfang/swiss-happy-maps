@@ -1,5 +1,8 @@
 # swiss_sentiment_map
-Interactive Visualization for Twitter Sentiment Across Switzerland.
+Interactive Visualization for Twitter Sentiment Across Switzerland. Here is a video demo:
+
+[![Alt text](images_readme/youtube_choropleth.png)](https://www.youtube.com/watch?v=qdTp-QBqTcc)
+
 
 The maps were created with the information we got from the json files (in the cluster) corresponding to the twitter data. Please, refer to the jupyter notebook **/data_wrangling/twitter_cleaning.ipynb** to see how we got the csv file (**/leaflet-app/data/twitter.csv**) that we used for generating the map.
 
@@ -9,9 +12,17 @@ The maps were created with the information we got from the json files (in the cl
 * The following packets in R need to be also installed (we are writing also the version we used):
   * sp (Classes and Methods for Spatial Data, version 1.2-4)  
   * rgdal (Bindings for Geospatial Data Abstraction Library, version 1.2-5)
-  * shiny (Web Application Framework for R, version 1.0)
+  * shiny (Web Application Framework for R, version 1.0) `install_packages("shiny")`
 
-The steps for displaying the application for displaying the map are:
+To run the file:
+It is possible to run Shiny from the remote source. The simplest way is to run the following code in RStudio (assuming RStudio and Shiny is installed):
+
+`library(shiny)
+
+shiny::runGitHub("swiss_sentiment_map", "tbfang")`
+
+Alternatively, it is possible to clone the repository, run the app with the following steps:
+
 * Open the "run_leaflet.R" file in R Studio, this file is localized in the root directory of this repository
 
 ![image](images_readme/1.png)
