@@ -8,7 +8,7 @@ We classified 6.5 million instagram post sentiments using fastText. Our [**noteb
 
 We provide an interactive visualization of the happiness of Switzerland across gender, time of day, and time of year with the [**interactive web application**](https://github.com/tbfang/swiss-happy-maps/tree/master/interactive-visualization).
 
-Our data was on the Hadoop cluster provided by [Prof. Catasta](https://people.epfl.ch/michele.catasta). Our data acquisition and processing was done with PySpark, and our PySpark applications are found in our [`scripts` repo](https://github.com/tbfang/swiss-happy-maps/tree/master/scripts). The data cleaning done for the visualization can be found in our [`data_wrangling` repo](https://github.com/tbfang/swiss-happy-maps/tree/master/data_wrangling).
+Our data was on the Hadoop cluster provided by [Prof. Catasta](https://people.epfl.ch/michele.catasta). Our data acquisition and processing was done with PySpark, and our PySpark applications are found in our [`scripts` repo](https://github.com/tbfang/swiss-happy-maps/tree/master/scripts). Extensive data wrangling done for the visualization can be found in our [`data_wrangling` repo](https://github.com/tbfang/swiss-happy-maps/tree/master/data_wrangling).
 
 ## Challenges Faced
 1. None of our team members had any knowledge of distributing computing or experience running jobs on the Hadoop cluster. It took us time and effort before successfully submitting a simple Spark application on the cluster.
@@ -21,6 +21,7 @@ Our data was on the Hadoop cluster provided by [Prof. Catasta](https://people.ep
 * [fastText](https://github.com/facebookresearch/fastText) for state-of-the-art word representation learning and text classification
 * [Leaflet](https://github.com/rstudio/leaflet) for interactive choropleth
 * [Shiny](https://erikflowers.github.io/weather-icons/) for interactive web app
+
 -------------------------------------------------------------------------------------------------------
 
 ## Repository Structure
@@ -31,3 +32,4 @@ Our data was on the Hadoop cluster provided by [Prof. Catasta](https://people.ep
 * [**`interactive_visualization`**](https://github.com/tbfang/swiss-happy-maps/tree/master/interactive_visualization): Gives the data and corresponding code in R for creating the Leaflet map and code for creating the shiny application in R that generates the interactive web application.
 
 Further details for each folder are given in the Readme of each folder.
+

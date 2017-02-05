@@ -1,4 +1,4 @@
-# File descriptions for data wrangling
+# Data Wrangling Task Descriptions
 
 1. `twitter_cleaning.ipynb`: This notebook uses the parquest files downloaded by the scripts in the folder `scripts` 
 that were used to download data for twitter (55.6GB). This notebook combines and cleans the parquet files based on some observations. The 
@@ -6,7 +6,7 @@ main purpose of cleaning is to make it ready for visualisation. In particular:
   * Combine all the downloaded parquet files into a single dataframe
   * Keep only the main languages (en, de and fr)
   * Remove tweets which do not have a sentiment
-  * Map the location for each tweet to a canton and remove garbage locations and cantons
+  * Map the location for each tweet to a canton and remove garbage locations and cantons (38% to 98% mapped)
   * Add month and time of day
   * GroupyBy columns that we want to add as filters in our visualisation and calculate average sentiment.
   * Finally return a CSV which can easily be read as a R dataframe for ease of visualisation.

@@ -1,8 +1,8 @@
-# Swiss Happy Maps
+# Interactive Choropleth Application
 
 ## Result
 
-Interactive Visualization for Twitter Sentiment Across Switzerland. Please check out our video demo:
+Interactive Visualization for Twitter Sentiment Across Switzerland. The interactive map can be filtered by Month, Gender, Language, Time of Day and Time of Year. Please check out our video demo:
 
 [![Alt text](images_readme/youtube_choropleth.png)](https://www.youtube.com/watch?v=qdTp-QBqTcc)
 
@@ -10,7 +10,7 @@ Interactive Visualization for Twitter Sentiment Across Switzerland. Please check
 
 * Data: `/interactive_visualization/data/twitter.csv`
 
-The raw data from the maps were from Twitter JSON files (55.6GB) in the cluster and the data we used for the visualization was 133KB. Please refer to the Jupyter notebook `/data_wrangling/twitter_cleaning.ipynb` for the full data preparation pipeline.
+The raw data from the maps were from Twitter JSON files (55.6GB) in the cluster and the data we used for the visualization was 133KB. Please refer to the Jupyter notebook `/data_wrangling/twitter_cleaning.ipynb` for the full data preparation pipeline. 
 
 * Tools: Leaflet and Shiny
 
