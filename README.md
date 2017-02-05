@@ -1,7 +1,7 @@
 # Evolution of happiness over time for different places in Switzerland
 
 ## Abstract
-We try do an analysis of how happy each part of Switzerland is during different times of the year and across times of the day as well as gender. We describe our approach below.
+We try to do an analysis of how happy each part of Switzerland is during different times of the year and across times of the day as well as gender. We describe our approach below.
 
 ## Data description and methodology
 * **Twitter** - We will use the twitter dataset (goodcitylife) provided by Prof. Catasta. We are already given a sentiment for most of the tweets along with city level location. We have canton for some of the data. We get the canton information for all the data and visualize it using RStudio to see the average twitter sentiment across different cantons and with the option to filter by Gender, Time of day and tweet language.
@@ -12,7 +12,7 @@ We provide the instagram sentiment we get to the other teams to be able to use t
 ## Challenges faced
 * Having no familiarity with using a cluster before, it took us some time and effort before we had our first simple script running on the cluster. We became quite comfortable with writing scripts in pyspark by the end of the project.
 * In the Machine Learning part, trying to create an image classificator with the 1 million and a half pictures from the instagram data was very difficult because two main reasons: the labels (sentiments) we already had, made no sense with the pictures, and also, the amount of time that would take to download around 8 million and a half pictures  and to train a model and to predict all the labels that are missing. That's why we chose to perform text classification based on the instagram tags.
-* Since we wanted to create an interactive map that could filter over several options (we found "folium" kind of limited thinking of the things we wanted to visualize), we chose to use the "shiny" library for R, this was very difficult at the beginning because none of the teammembers had previous knowledge of R. As we did in the cluster, we became more comfortable with the R and R Studio as we were working on the project.
+* Since we wanted to create an interactive map that could filter over several options (we found "folium" kind of limited thinking of the things we wanted to visualize), we chose to use the "shiny" library for R, this was very difficult at the beginning because none of the teammembers had previous knowledge of R. As we did in the cluster, we became more comfortable with the R language and R Studio as we were working on the project.
 
 ## Deliverables
 ### Machine Learning
