@@ -15,7 +15,7 @@ The steps for displaying the application for displaying the map are:
 * Open the "run_leaflet.R" file in R Studio, this file is localized in the root directory of this repository
 ![image](images_readme/1.png)
 
-* Change the directory to the root directory of this repository (where both the "run_leaflet.R" file and the "leaflet-app" folder are)
+* Change the directory to the root directory of this repository (where both the "run_leaflet.R" file and the "leaflet-app" folder are) (go to "Session -> Set Working Directory -> Choose Directory…")
 ![image](images_readme/2.png)
 ![image](images_readme/3.png)
 
