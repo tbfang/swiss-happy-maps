@@ -13,17 +13,21 @@ The maps were created with the information we got from the json files (in the cl
 
 The steps for displaying the application for displaying the map are:
 * Open the "run_leaflet.R" file in R Studio, this file is localized in the root directory of this repository
+
 ![image](images_readme/1.png)
 
 * Change the directory to the root directory of this repository (where both the "run_leaflet.R" file and the "leaflet-app" folder are) (go to "Session -> Set Working Directory -> Choose Directory…")
+
 ![image](images_readme/2.png)
+
 ![image](images_readme/3.png)
 
 * Press the "Run app" button localizad in the same "run_leaflet.R" pane
 
 ![image](images_readme/run_app_b.png)
 
-After performing the mentioned steps, a new window of R Studio will be displayed showing the application for the interactive map
+After performing the mentioned steps, a new window of R Studio will be displayed showing the application for the interactive map:
+
 ![image](images_readme/4.png)
 
 Due to the map is interactive, one can change the filters we want to apply for displaying the map such as the gender (male/female/both), language (English, German, French, All), time of the day (Day, Night, All) or select a specific month or a range of months (1 for January, 2 for February and so on until 10 for october). One also can hover over the cantons to see the sentiment value corresponding to it.
