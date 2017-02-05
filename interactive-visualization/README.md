@@ -10,12 +10,12 @@ The maps were created with the information we got from the json files (in the cl
 
 * R as well as R Studio have to be installed\*
 * The following packets in R need to be also installed (we are writing also the version we used):
-  * sp (Classes and Methods for Spatial Data, version 1.2-4)  
-  * rgdal (Bindings for Geospatial Data Abstraction Library, version 1.2-5)
+  * sp (Classes and Methods for Spatial Data, version 1.2-4)  `install_packages("sp")`
+  * rgdal (Bindings for Geospatial Data Abstraction Library, version 1.2-5) `install_packages("rgdal")`
   * shiny (Web Application Framework for R, version 1.0) `install_packages("shiny")`
 
 To run the file:
-The simplest way is to run our app from remote source (Github) with following code in RStudio (assuming RStudio and Shiny is installed):
+The simplest way is to run our app from remote source (Github) with following code in RStudio (assuming that RStudio and Shiny are installed):
 
 ```R
 library(shiny)
