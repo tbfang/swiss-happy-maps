@@ -92,25 +92,3 @@ for m in months:
         cleaned_df = cleaned_df.unionAll(s_temp)
 
     cleaned_df.write.parquet('file:///home/fang/twitter_gender' + '_' + m[:3]+'.parquet')
-
-
-                    
-                    
-                    
-                    
-# for path in all_paths:
-#     if(fnmatch.fnmatch(path, twitter_files)):
-#         file_list.append(path)
-
-
-# schema = StructType([StructField('id',StringType(),True),StructField('gender',StringType(),True),StructField('canton',StringType(),True)])
-
-# cleaned_df = sqlContext.createDataFrame(sc.emptyRDD(), schema)
-
-# for f in file_list[:15]:
-#     df_temp = sqlContext.read.json(f)
-#     s_temp = getCols(df_temp)
-#     cleaned_df = cleaned_df.unionAll(s_temp)
-
-# cleaned_df.write.parquet('file:///home/fang/twitter_cleaned_oct2.parquet')
-
