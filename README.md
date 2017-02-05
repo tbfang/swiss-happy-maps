@@ -4,7 +4,7 @@ Happiness of Swiss cantons based on social media sentiment.
 
 ## Summary of Work
 
-We classified 6.5 million instagram post sentiments using fastText. Our [**notebook**](https://github.com/tbfang/swiss-happy-maps/blob/master/machine_learning/sentiment_classifier.ipynb) is complete with feature analysis, word clouds, learning curves, cross-validation, confusion matrix to explain the model and measure its performance.
+We classified 6.5 million instagram post sentiments using fastText. Our [**notebook**](https://github.com/tbfang/swiss-happy-maps/blob/master/machine_learning/sentiment_classifier.ipynb) is complete with data preparation, feature analysis, word clouds, hyperparameter selection, learning curves, cross-validation, confusion matrix to explain the model and measure its performance.
 
 We provide an interactive visualization of the happiness of Switzerland across gender, time of day, and time of year with the [**interactive web application**](https://github.com/tbfang/swiss-happy-maps/tree/master/interactive-visualization).
 
