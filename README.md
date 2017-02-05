@@ -1,40 +1,34 @@
 # Evolution of happiness over time for different places in Switzerland
 
 ## Abstract
-Switzerland is always near the top when we see the list of happiest countries in the world. So what is it that makes Switzerland so happy? Is it the mountains? The lakes? The money? We try to do an analysis of how happy each part of Switzerland is during different times of the year and what is it that makes it happy by doing a sentiment analysis of geotagged social media posts. We describe our approach below.
+We try do an analysis of how happy each part of Switzerland is during different times of the year and across times of the day as well as gender. We describe our approach below.
 
 ## Data description and methodology
-* **Twitter** - We will use the twitter dataset from 2012 provided by Prof. Catasta. We will use machine learning techniques on the text of the tweets as well as use hashtags and emoticons to do a sentiment analysis on the tweets. We will also look for a corpus on which we can train our model. [1] suggests several possible datasets we can use to train our model.
-* **Instagram** -  We will use the instagram data provided by Prof. Catasta in a similar way as the twitter data to do a sentiment analysis. We can also analyze the image along with the text and hashtags.
+* **Twitter** - We will use the twitter dataset from 2012 provided by Prof. Catasta. We are already given a sentiment for most of the tweets along with city level location. We have canton for some of the data. We get the canton information for all the data and visualize it using RStudio to see the average twitter sentiment across different cantons and with the option to filter by Gender, Time of day and tweet language.
+* **Instagram** -  We will use the instagram data provided by Prof. Catasta in a similar way as the twitter data. But we first do a sentiment analysis on the Instagram dataset since we are not given the sentiments. We do a sentiment analysis on the hashtags for this purpose using FastText. Details are given in the readme in the machine_learning folder.
 
-Since the data for Twitter and Instagram is geolocated, doing a sentiment analysis will finally give us geolocated sentiments for different places in Switzerland. We will analyze this data to figure out which regions are happier during which time of the year. We can also additionally do a frequency analysis on the tweets to figure out what words come up most frequently at a particular time of the year over the year to figure out a reason for a change in general sentiment for each region.
+We provide the instagram sentiment we get to the other teams to be able to use them.
 
-And if there is still time after this ( which is unlikely ) we can restric ourselves to a particular city, and make a 'happy map' similar to [3]. We can use the same methodology as they use to get the shortest path which maximizes happiness. But since we have a happiness map that evolves over time, such a path will also change over time rather than remain fixed. Fox example some roads might me more beautiful in fall, etc.
-
-## Feasibility and Risks
-We describe the risks we face in doing this analysis as well as what we can do to counter those risks.
-* We do not have a manually labelled dataset which says whether a particular tweet/instagram post is positive or negative. There are several datasets available to train english tweets, but it might be difficult to find training sets for French and German tweets. So we might need to do unsupervised learning. [2] suggests several ways in which unsupervised learning has been successfully applied for sentiment analysis so it should still be doable.
-* Use of slang and incorrect spelling in the tweets might make the sentiment analysis more difficult.
-* We might not have enough data if we wish to use neural networks to do unsupervised learning.
-* If there is no significant change in sentiment over time, the results and visualization might not be so interesting. In this case we would restric ourselves to a particular genre of tweets and see if the results are more interesting. For example we can look at posts that only refer to the geography and climate ( lakes, mountains, skiing, etc ). Or any other genre, like politics, entertainment etc.
+## Challenges faced
+* Having no familiarity with using a cluster before, it took us some time and effort before we had our first simple script running on the cluster. We became quite comfortable with writing scripts in pyspark by the end of the project.
+* **TODO** Challenges faced in machine learning
+* **TODO** Challenges faced in Visualization.
 
 ## Deliverables
 ### Machine Learning
-* A result of the sentiment analysis of twitter and instagram posts along with a measure of how good our model is in doing sentiment analysis.
+* A result of the sentiment analysis of instagram posts using text analysis of the hashtags along with a measure of how good our model is in doing sentiment analysis.
 
 ### Visualization
-* Using the results of the sentiment analysis to make a map of Switzerland which shows how happy each part is. The map should eveolve over time.
-* If we can also get the reason for change in the sentiment by doing the frequency analysis, we can use http://cesiumjs.org/ to have objects appear at places where we know the reason for the sentiment. For example along with showing that there is a positive sentiment in verbier in the winter, we show a picture of a ski there.
+* Using the results of the sentiment analysis to make a map of Switzerland which shows how happy each part is. The dynamic map can be filtered by Month, Gender, Language and time of day to see the average sentiment for each Canton.
 
-## Timeplan
+-------------------------------------------------------------------------------------------------------
 
-|                       | 7-13 Nov  | 14-20 Nov | 21-27 Nov | 28 Nov-4 Dec | 5-11 Dec | 12-18 Dec | 19-25 Dec | 26 Dec-1 Jan | 2-8 Jan | 9-15 Jan | 15-22 Jan
-|---------------------------|----------------|------------|-------------|-------------|----------------|------------|-------------|-------------|----------------|-----------|------------|
-| Preparing and cleaning the data |        *        |     *       |              |             |                |            |             |             |                |           |            |
-| Sentiment Analysis           |                |            |      *       |      *       |       *         |   *        |    *      |      *       |            |       |            |
-| Result Visualization      |                |            |             |             |                |            |       *      |       *      |       *         |     *      |      *     |
+## Repository Structure
 
-## Bibliography
-1. http://stackoverflow.com/questions/7551262/training-data-for-sentiment-analysis
-2. http://stackoverflow.com/questions/3920759/unsupervised-sentiment-analysis
-3. http://goodcitylife.org/
+* `Scripts`: Contains the scripts we ran on the cluster, usually to save the data as parquet so that we can do further analysis on it locally.
+* `data_wrangling`: Contains the notebooks used to clean the twitter data downloaded through the scripts. It is finally made into a form more suitable for visualisation.
+* `Machine_Learning`: Gives the code and details for the Machine Learning part. The notebook is complete with learning curves, cross-validation, etc to get an idea of the how the model is as well as explanations on the details of the model.
+* `leaflet-app`: **TODO** Details to be added as seen fit.
+
+Further details for each folder are given in the Readme of each folder.
+
