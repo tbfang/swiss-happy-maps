@@ -1,5 +1,9 @@
 ## Machine Learning for Instagram Posts
 
+### Result
+[`FastText_sentiment_classifier.ipynb`](https://github.com/tbfang/swiss-happy-maps/blob/master/machine_learning/FastText_sentiment_classifier.ipynb) contains the full ML pipeline for classifying instagram sentiments. It is complete with data preparation, feature analysis, word clouds, hyperparameter selection, learning curves, cross-validation, confusion matrix to explain the model and measure its performance.
+
+### Background
 We decided to do Machine Learning only on the instagram posts, since for the twitter data we had, around 92% of the tweets already had a sentiment:
 
 **Twitter:**
