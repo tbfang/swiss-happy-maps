@@ -1,3 +1,3 @@
+setwd("~/Documents/EPFL/ADA/ADA-Project")
 library(shiny)
-runApp("leaflet-app")
-
+runApp("interactive-visualization")

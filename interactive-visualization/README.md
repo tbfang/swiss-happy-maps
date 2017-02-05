@@ -39,11 +39,7 @@ Alternatively, it is possible to clone the repository, run the app with the foll
 
 ![image](images_readme/1.png)
 
-* Change the directory to the root directory of this repository (where both the `run_leaflet.R` file and the `interactive_visualization` folder are) (go to "Session -> Set Working Directory -> Choose Directory…")
-
-![image](images_readme/2.png)
-
-![image](images_readme/3.png)
+* Type the command `setwd("/path/to/root_directory")` in RStudio, replacing the path to the root directory of this repository (where both the `run_leaflet.R` file and the `interactive_visualization` folder are).
 
 * Press the "Run app" button localizad in the same `run_leaflet.R` pane
 
