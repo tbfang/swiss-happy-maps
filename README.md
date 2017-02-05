@@ -25,10 +25,10 @@ We provide the instagram sentiment we get to the other teams to be able to use t
 
 ## Repository Structure
 
-* `Scripts`: Contains the scripts we ran on the cluster, usually to save the data as parquet so that we can do further analysis on it locally.
+* `scripts`: Contains the scripts we ran on the cluster, usually to save the data as parquet so that we can do further analysis on it locally.
 * `data_wrangling`: Contains the notebooks used to clean the twitter data downloaded through the scripts. It is finally made into a form more suitable for visualization.
-* `Machine_Learning`: Gives the code and details for the Machine Learning part. The notebook is complete with learning curves, cross-validation, etc to get an idea of the how the model is as well as explanations on the details of the model.
-* `leaflet-app`: Gives the data and corresponding code in R for creating the maps, as well as the code for the server and user for creating the shiny application in R that generates the interactive map.
+* `machine_learning`: Gives the code and details for the Machine Learning part. The notebook is complete with learning curves, cross-validation, etc to get an idea of the how the model is as well as explanations on the details of the model.
+* `interactive_visualization`: Gives the data and corresponding code in R for creating the maps, as well as the code for the server and user for creating the shiny application in R that generates the interactive map.
 
 Further details for each folder are given in the Readme of each folder.
 

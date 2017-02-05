@@ -1,10 +1,10 @@
 # swiss_sentiment_map
-Interactive Visualization for Twitter Sentiment Across Switzerland. Here is a video demo:
+Interactive Visualization for Twitter Sentiment Across Switzerland. Please check out our video demo:
 
 [![Alt text](images_readme/youtube_choropleth.png)](https://www.youtube.com/watch?v=qdTp-QBqTcc)
 
 
-The maps were created with the information we got from the json files (in the cluster) corresponding to the twitter data. Please, refer to the jupyter notebook **/data_wrangling/twitter_cleaning.ipynb** to see how we got the csv file (**/leaflet-app/data/twitter.csv**) that we used for generating the map.
+The maps were created with the information we got from the json files (in the cluster) corresponding to the twitter data. Please, refer to the jupyter notebook `/data_wrangling/twitter_cleaning.ipynb` to see how we got the csv file (`/interactive_visualization/data/twitter.csv`) that we used for generating the map.
 
 **NOTE:** Before trying to run the application for displaying the map, please be sure you meet with the following:
 
@@ -15,25 +15,26 @@ The maps were created with the information we got from the json files (in the cl
   * shiny (Web Application Framework for R, version 1.0) `install_packages("shiny")`
 
 To run the file:
-It is possible to run Shiny from the remote source. The simplest way is to run the following code in RStudio (assuming RStudio and Shiny is installed):
+The simplest way is to run our app from remote source (Github) with following code in RStudio (assuming RStudio and Shiny is installed):
 
-`library(shiny)
-
-shiny::runGitHub("swiss_sentiment_map", "tbfang")`
+```R
+library(shiny)
+shiny::runGitHub("swiss_sentiment_map", "tbfang")
+```
 
 Alternatively, it is possible to clone the repository, run the app with the following steps:
 
-* Open the "run_leaflet.R" file in R Studio, this file is localized in the root directory of this repository
+* Open the `run_leaflet.R` file in R Studio, this file is localized in the root directory of this repository
 
 ![image](images_readme/1.png)
 
-* Change the directory to the root directory of this repository (where both the "run_leaflet.R" file and the "leaflet-app" folder are) (go to "Session -> Set Working Directory -> Choose Directory…")
+* Change the directory to the root directory of this repository (where both the `run_leaflet.R` file and the `interactive_visualization` folder are) (go to "Session -> Set Working Directory -> Choose Directory…")
 
 ![image](images_readme/2.png)
 
 ![image](images_readme/3.png)
 
-* Press the "Run app" button localizad in the same "run_leaflet.R" pane
+* Press the "Run app" button localizad in the same `run_leaflet.R` pane
 
 ![image](images_readme/run_app_b.png)
 
