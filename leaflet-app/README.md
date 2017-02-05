@@ -1,7 +1,7 @@
 # swiss_sentiment_map
 Interactive Visualization for Twitter Sentiment Across Switzerland.
 
-This map was created with the information we got from the json files (in the cluster) corresponding to the twitter data. Please, refer to the jupyter notebook **/data_wrangling/twitter_cleaning.ipynb** to see how we got the csv file (**/leaflet-app/data/twitter.csv**) that we used for generating the map.
+The maps were created with the information we got from the json files (in the cluster) corresponding to the twitter data. Please, refer to the jupyter notebook **/data_wrangling/twitter_cleaning.ipynb** to see how we got the csv file (**/leaflet-app/data/twitter.csv**) that we used for generating the map.
 
 **NOTE:** Before trying to run the application for displaying the map, please be sure you meet with the following:
 
