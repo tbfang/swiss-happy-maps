@@ -66,4 +66,5 @@ Due to the map is interactive, one can change the filters we want to apply for d
 
 ![image](images_readme/6.png)
 
+
 \*For more information, please refer to https://www.r-project.org and https://www.rstudio.com

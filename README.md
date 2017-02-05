@@ -34,5 +34,5 @@ Our data was on the Hadoop cluster provided by [Prof. Catasta](https://people.ep
 Further details for each folder are given in the Readme of each folder.
 
 ## Acknowledgement
----------------
+
 This repository was developed by [Kirtan Padh](https://github.com/kirtanp/), [Luis Medina](https://github.com/lemmmr), and [Tina Fang](https://github.com/tbfang/) from November 2016 to February 2017 for the course [Applied Data Analysis](http://ada.epfl.ch/) at EPFL, Switzerland.
