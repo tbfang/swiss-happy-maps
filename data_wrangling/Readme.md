@@ -1,7 +1,7 @@
 # File descriptions for data wrangling
 
-1. `twitter_cleaning.ipynb`: This notebook uses the parquest files downloaded by the scrips in the folder `Scripts` 
-that were used to download data for twitter and then combines them and cleans them based on some observations. The 
+1. `twitter_cleaning.ipynb`: This notebook uses the parquest files downloaded by the scripts in the folder `scripts` 
+that were used to download data for twitter (55.6GB). This notebook combines and cleans the parquet files based on some observations. The 
 main purpose of cleaning is to make it ready for visualisation. In particular:
   * Combine all the downloaded parquet files into a single dataframe
   * Keep only the main languages (en, de and fr)

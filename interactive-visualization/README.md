@@ -1,10 +1,22 @@
-# swiss_sentiment_map
+# Swiss Happy Maps
+
+## Result
+
 Interactive Visualization for Twitter Sentiment Across Switzerland. Please check out our video demo:
 
 [![Alt text](images_readme/youtube_choropleth.png)](https://www.youtube.com/watch?v=qdTp-QBqTcc)
 
+## Methodology
 
-The maps were created with the information we got from the json files (in the cluster) corresponding to the twitter data. Please, refer to the jupyter notebook `/data_wrangling/twitter_cleaning.ipynb` to see how we got the csv file (`/interactive_visualization/data/twitter.csv`) that we used for generating the map.
+* Data: `/interactive_visualization/data/twitter.csv`
+
+The raw data from the maps were from Twitter JSON files (55.6GB) in the cluster and the data we used for the visualization was 133KB. Please refer to the Jupyter notebook `/data_wrangling/twitter_cleaning.ipynb` for the full data preparation pipeline.
+
+* Tools: Leaflet and Shiny
+
+We used [Leaflet](https://rstudio.github.io/leaflet) and build the interactive choropleth and [Shiny](https://rstudio.github.io/leaflet) to build the interactive web application. Using an interactive web app framework, we were able to ouput different Leaflet maps according to the user selection.
+
+## Instructions for Running the Map
 
 **NOTE:** Before trying to run the application for displaying the map, please be sure you meet with the following:
 
@@ -14,7 +26,6 @@ The maps were created with the information we got from the json files (in the cl
   * rgdal (Bindings for Geospatial Data Abstraction Library, version 1.2-5)
   * shiny (Web Application Framework for R, version 1.0) `install_packages("shiny")`
 
-To run the file:
 The simplest way is to run our app from remote source (Github) with following code in RStudio (assuming RStudio and Shiny is installed):
 
 ```R
